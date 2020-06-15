@@ -1,7 +1,7 @@
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'trb^f0u2iyrk7p1pwrt)!@g+#wm9gclyhj7sar*t@7vv5@x%!s'
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'web.apps.WebConfig',
