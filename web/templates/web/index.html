@@ -1,0 +1,210 @@
+{% extends 'web/main.html' %}
+{% load static %}
+{% block title_page %}
+<title>Document</title>
+{% endblock title_page %}
+{% block content %}
+  <header class="header" id="header">
+    <!--header-start-->
+    <div class="container">
+      <figure class="logo animated fadeInDown delay-07s">
+        <a href="#"><img src="{% static 'img/logo.png' %}" alt=""></a>
+      </figure>
+      <h1 class="animated fadeInDown delay-07s">Башкирская медицинская техника</h1>
+      <ul class="we-create animated fadeInUp delay-1s">
+        <li><br>С 2005 года компания БМТ поставляет качественное медицинское оборудование в клиники, больницы и медицинские центры по всей России.</br>
+<br>Высокое качество обслуживания, индивидуальный подход и гибкая ценовая политика позволили занять нам достойное место на рынке медтехники. Среди наших постоянных клиентов государственные больницы и частные медицинские учреждения.</br>
+<br>В нашем каталоге Вы найдете только самое современное медицинское оборудование для оснащения палаты интенсивной терапии, стоматологического кабинета и хирургии.</br>
+<br>Для диагностики и ультразвуковых исследований мы предлагаем медтехнику от ведущих мировых производителей. Также в широком ассортименте представлены расходные материалы, медицинская и лабораторная мебель, товары для домашнего использования (тонометры, глюкометры, массажеры и т.д.)</br>
+<br>Вы можете оформить заявку на нашем сайте и в комментарии задать все интересующие вопросы, наши менеджеры свяжутся с вами в самое ближайшее время!</br> </li>
+      </ul>
+      <a class="link animated fadeInUp delay-1s servicelink" href="#service">Перейти</a>
+    </div>
+  </header>
+  <section class="main-section" id="service">
+    <!--main-section-start-->
+    <div class="container">
+      <h2>Спецпредложение</h2>
+      <h6>Расходные материалы к инсулиновым помпам для больных сахарным диабетом по спецценам !!!</h6>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
+          <div class="service-list">
+            <h2>Лучшие предложения</h2>
+            <div class="service-list-col1">
+              <i class="fa fa-medkit"></i>
+            </div>
+            <div class="service-list-col2">
+              <h3><a href = "{% url 'shop'%}">СТАЦИОНАРНЫЙ СКАНЕР MYLAB 70</a></h3>
+              <p>MyLab 70 – стационарный ультразвуковой универсальный аппарат экспертного класса </p>
+            </div>
+          </div>
+          <div class="service-list">
+            <div class="service-list-col1">
+              <i class="fa fa-medkit"></i>
+            </div>
+            <div class="service-list-col2">
+              <h3><a href = "{% url 'shop'%}">ПОРТАТИВНЫЙ СКАНЕР MYLAB 30</a></h3>
+              <p>MyLab™30 – это идеальное сочетание размера и выполняемых функций.</p>
+            </div>
+          </div>
+          <div class="service-list">
+            <div class="service-list-col1">
+              <i class="fa fa-medkit"></i>
+            </div>
+            <div class="service-list-col2">
+              <h3><a href = "{% url 'shop'%}">СТЕРИЛИЗАТОР ВОЗДУШНЫЙ ГП-10 МО</a></h3>
+              <p>Стерилизатор воздушный предназначен для стерилизации хирургических инструментов, стеклянной посуды и термостойких шприцов</p>
+            </div>
+          </div>
+          <div class="service-list">
+            <div class="service-list-col1">
+              <i class="fa fa-medkit"></i>
+            </div>
+            <div class="service-list-col2">
+              <h3><a href = "{% url 'shop'%}">ПОРТАТИВНЫЙ АВТОМАТИЗИРОВАННЫЙ ДЕФИБРИЛЛЯТОР HEARTSTART FRX</a></h3>
+              <p>Портативный автоматизированный дефибриллятор FRx (формата AED), не требующий специальной медицинской подготовки</p>
+            </div>
+          </div>
+        </div>
+        <figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
+
+          <!-- Bootstrap 3 -->
+          <div id="carousel" class="carousel slide" data-ride="carousel">
+            <!-- Индикаторы -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel" data-slide-to="1"></li>
+              <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="{% static 'img/MyLab70.JPEG' %}" alt="">
+              </div>
+              <div class="item">
+                <img src="{% static 'img/MyLab30.JPEG' %}" alt="">
+              </div>
+              <div class="item">
+                <img src="{% static 'img/GP10.JPG' %}" alt="">
+              </div>
+            </div>
+            <!-- Элементы управления -->
+            <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Предыдущий</span>
+            </a>
+            <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Следующий</span>
+            </a>
+          </div>
+          <!-- Bootstrap 4 -->
+<div id="carousel" class="carousel slide" data-ride="carousel">
+  <!-- Индикаторы -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="img-fluid" src="" alt="">
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src="" alt="">
+    </div>
+    <div class="carousel-item">
+       <img class="img-fluid" src="" alt="">
+    </div>
+  </div>
+  <!-- Элементы управления -->
+  <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Предыдущий</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Следующий</span>
+  </a>
+</div>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+  <section class="main-section alabaster">
+    <div class="container">
+      <div class="row">
+        <figure class="col-lg-5 col-sm-4 wow fadeInLeft">
+          <img src="{% static 'img/covid.jpg' %}" alt=""> 
+        </figure>
+        <div class="col-lg-7 col-sm-8 featured-work">
+          <h2>Полезная информация</h2>
+          <div class="featured-box">
+            <div class="featured-box-col1 wow fadeInRight delay-02s">
+            </div>
+            <div class="featured-box-col2 wow fadeInRight delay-02s">
+              <h3><a href = "{% url 'innovations'%}">Инновации в области медицинского оборудования</a></h3>
+            </div>
+          </div>
+          <div class="featured-box">
+            <div class="featured-box-col1 wow fadeInRight delay-04s">
+            </div>
+            <div class="featured-box-col2 wow fadeInRight delay-04s">
+              <h3><a href = "{% url 'postavshiki'%}">Как выбрать поставщика качественного оборудования</a></h3>
+            </div>
+          </div>
+          <div class="featured-box">
+            <div class="featured-box-col1 wow fadeInRight delay-06s">
+            </div>
+            <div class="featured-box-col2 wow fadeInRight delay-06s">
+              <h3><a href = "{% url 'medkab'%}">Медкабинеты в образовательных учреждениях</a></h3>
+            </div>
+          </div>
+          <div class="featured-box">
+            <div class="featured-box-col1 wow fadeInRight delay-04s">
+            </div>
+            <div class="featured-box-col2 wow fadeInRight delay-04s">
+              <h3><a href = "{% url 'sanit'%}">Оснащение санитарно-курортных учреждении</a></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <section class="main-section contact" id="contact">
+
+        <div class="row">
+          <div class="col-lg-6 col-sm-7 wow fadeInLeft">
+            <div class="contact-info-box phone clearfix">
+              <h3><i class="fa fa-phone"></i>Телефон:</h3>
+              <span>Уфа: +7(347)-292-98-90
+                <br>Нефтекамск: +7(34783)-2-37-60</br>
+                Москва: 8-800-77-55-118
+              </span>
+            </div>
+            <div class="contact-info-box email clearfix">
+              <h3><i class="fa fa-pencil"></i>Адрес</h3>
+              <span>
+                  Адрес: г.Уфа, ул. З.Биишевой, д.1
+                  <br>Е-mail: bmtufa@mail.ru</span>
+  <br>Адрес: Республика Башкортостан, г. Нефтекамск, ул. Янаульская, д.1л
+  <br>E-mail: bmt-2008@yandex.ru
+  <br>Адрес: 119435, г. Москва, Большой Саввинский переулок, д. 8с1
+  <br>E-mail: bmtmoscow@yandex.ru
+            </div>
+          </div>
+      </section>
+    </div>
+  </section>
+  <!--business-talking-end-->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo"><a href="#"><img src="{% static 'img/footer-logo.png' %}" alt=""></a></div>
+      <span class="copyright">&copy; 2009-2020 ООО "БМТ". Все права защищены.</span>
+      <div class="credits">
+      </div>
+    </div>
+  </footer>
+
+  {% endblock content %}

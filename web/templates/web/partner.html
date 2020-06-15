@@ -1,0 +1,81 @@
+{% extends 'web/main.html' %}
+{% load static %}
+{% block title_page %}
+<title>Наши клиенты</title>
+{% endblock title_page %}
+{% block content %}
+
+<style>
+   .center {
+    width: 700px; /* Ширина элемента в пикселах */
+    padding: 10px; /* Поля вокруг текста */
+    margin: auto; /* Выравниваем по центру */
+   }
+  </style>
+  <div class="center">
+   ГБУЗ РЕСПУБЛИКАНСКИЙ КАРДИОЛОГИЧЕСКИЙ ДИСПАНСЕР Г. УФЫ
+   <p><img src="{% static 'img/kard_dis.jpg' %}" width="310" height="240" alt="">
+     <img src="{% static 'img/Kardio_oborud.jpg' %}" width="310" height="240" alt="">
+   </p>
+
+   <p>
+     ГБУЗ ГБ №13 Г. УФЫ
+    <p><img src="{% static 'img/GB13.jpg' %}" width="310" height="240" alt="">
+      <img src="{% static 'img/13GB_oborud.jpg' %}" width="310" height="240" alt="">
+    </p>
+   </p>
+
+   <p>
+     ГБУЗ БАКАЛИНСКАЯ ЦРБ С. БАКАЛЫ
+     <p><img src="{% static 'img/Bakalinsk_oborud.jpg' %}" width="310" height="240" alt="">
+     </p>
+   </p>
+
+   <p>
+     ГБУЗ РБ БОЛЬНИЦА СКОРОЙ МЕДИЦИНСКОЙ ПОМОЩИ Г.УФА
+    <p><img src="{% static 'img/_РБ БСМП г.Уфа.jpg' %}" width="400" height="240" alt="">
+    </p>
+   </p>
+
+   <p>
+     ГБУЗ РБ КРАСНОКАМСКАЯ ЦРБ
+    <p><img src="{% static 'img/_РБ Краснокамская ЦРБ.jpg' %}" width="400" height="240" alt="">
+    </p>
+   </p>
+
+   <p>
+     ГБУЗ РБ ТУЙМАЗИНСКАЯ ЦРБ
+    <p><img src="{% static 'img/_РБ Туймазинская ЦРБ.jpg' %}" width="400" height="240" alt="">
+    </p>
+   </p>
+
+   <p>
+     ГБУЗ РЕСПУБЛИКАНСКАЯ КЛИНИЧЕСКАЯ БОЛЬНИЦА №2 Г.УФА
+    <p><img src="{% static 'img/_РКБ No.2 Уфа.jpg' %}" width="400" height="240" alt="">
+    </p>
+   </p>
+
+   <p>
+     ГБУЗ РБ ГОРОДСКАЯ ПОЛИКЛИНИКА №6 Г.СТЕРЛИТАМАК
+    <p><img src="{% static 'img/_РБ ГП No.6 Стерлитамак.jpg' %}" width="210" height="240" alt="">
+    </p>
+   </p>
+
+   <p>
+     ГКБ №1 Г.СТЕРЛИТАМАК
+    <p><img src="{% static 'img/_No.1 г.Стерлитамак.jpg' %}" width="400" height="240" alt="">
+    </p>
+   </p>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo"><a href="#"><img src="{% static 'img/footer-logo.png' %}" alt=""></a></div>
+      <span class="copyright">&copy; 2009-2020 ООО "БМТ". Все права защищены.</span>
+      <div class="credits">
+      </div>
+    </div>
+  </footer>
+
+{% endblock content %}

@@ -1,0 +1,209 @@
+{% extends 'web/main.html' %}
+{% load static %}
+{% block title_page %}
+<title>Магазин</title>
+{% endblock title_page %}
+{% block content %}
+<section class="main-section paddind" id="Portfolio">
+  <!--main-section-start-->
+  <div class="container">
+    <h2>Магазин</h2>
+    <h6>У нас большой ассортимент.</h6>
+    <div class="portfolioFilter">
+      <ul class="Portfolio-nav wow fadeIn delay-02s">
+        <li><a href="#" data-filter="*" class="current">Все</a></li>
+        <li><a href="#" data-filter=".vet">ВЕТЕРИНАРИЯ</a></li>
+        <li><a href="#" data-filter=".anest">АНЕСТЕЗИОЛОГИЯ И РЕАНИМАЦИЯ</a></li>
+        <li><a href="#" data-filter=".comp">КОМПЬЮТЕРНАЯ ТОМОГРАФИЯ</a></li>
+        <li><a href="#" data-filter=".mrt">АНГИОЛОГИЯ И МРТ</a></li>
+        <li><a href="#" data-filter=".lab">ЛАБОРАТОРНАЯ МЕБЕЛЬ</a></li>
+        <li><a href="#" data-filter=".neon">НЕОНАТОЛОГИЯ</a></li>
+        <li><a href="#" data-filter=".rashod">РАСХОДНЫЕ МАТЕРИАЛЫ</a></li>
+        <li><a href="#" data-filter=".ster">СТЕРИЛИЗАЦИЯ И ДЕЗИНФЕКЦИЯ</a></li>
+        <li><a href="#" data-filter=".stom">СТОМАТОЛОГИЯ</a></li>
+        <li><a href="#" data-filter=".ultra">УЛЬТРАЗВУКОВАЯ ДИАГНОСТИКА</a></li>
+        <li><a href="#" data-filter=".fiz">ФИЗИОТЕРАПИЯ</a></li>
+        <li><a href="#" data-filter=".funct">ФУНКЦИОНАЛЬНАЯ ДИАГНОСТИКА</a></li>
+        <li><a href="#" data-filter=".hir">ХИРУРГИЯ</a></li>
+        <li><a href="#" data-filter=".endokrin">ЭНДОКРИНОЛОГИЯ</a></li>
+        <li><a href="#" data-filter=".endoskop">ЭНДОСКОПИЯ</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <style>
+        #zatemnenie {
+          background: rgba(102, 102, 102, 0.5);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: none;
+        }
+        #okno {
+          width: 300px;
+          height: 100px;
+          text-align: center;
+          padding: 15px;
+          border: 3px solid #e3492b;
+          border-radius: 10px;
+          color: #000000;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          background: #fff;
+        }
+        #zatemnenie:target {display: block;}
+        .close {
+          display: inline-block;
+          border: 1px solid #e3492b;
+          color: #e3492b;
+          padding: 0 50px;
+          margin: 10px;
+          text-decoration: none;
+          background: #f2f2f2;
+          font-size: 14pt;
+          cursor:pointer;
+        }
+        .close:hover {background: #e6e6ff;}
+      </style>
+
+      <div id="zatemnenie">
+      <div id="okno">
+              <h3><i class="fa fa-phone"></i>Телефон:</h3>
+              <span>Уфа: +7(347)-292-98-90
+                <br>Нефтекамск: +7(34783)-2-37-60</br>
+                Москва: 8-800-77-55-118
+              </span>
+        <br>
+        <a href="#" class="close">Закрыть окно</a>
+      </div>
+    </div>
+
+  <div class="portfolioContainer wow fadeInUp delay-04s">
+    {% for post in pr %}
+      {% if post.availability %}
+        {% if post.group == "CT SCAN" %}
+        <div class="Portfolio-box comp">
+          <a href="{% url 'tovar' post.id %}" ><img src="{{ post.img.url }}" alt=""></a>
+          <h3>{{ post.name }}</h3>
+          Цена:<a href="#zatemnenie"><p>{{ post.price }}</p></a>
+        </div>
+
+        {% elif post.group == "VETERINARY" %}
+        <div class="Portfolio-box vet">
+          <a href="{% url 'tovar' post.id %}"><img src="{{ post.img.url }}" alt=""></a>
+          <h3>{{ post.name }}</h3>
+          Цена:<a href="#zatemnenie"><p>{{ post.price }}</p></a>
+        </div>
+
+        {% elif post.group == "ANESTHESIOLOGY AND RESUSCITATION" %}
+        <div class="Portfolio-box anest">
+          <a href="{% url 'tovar' post.id %}"><img src="{{ post.img.url }}" alt=""></a>
+          <h3>{{ post.name }}</h3>
+          Цена:<a href="#zatemnenie"><p>{{ post.price }}</p></a>
+        </div>
+
+        {% elif post.group == "LABORATORY FURNITURE" %}
+        <div class="Portfolio-box lab">
+          <a href="{% url 'tovar' post.id %}"><img src="{{ post.img.url }}" alt=""></a>
+          <h3>{{ post.name }}</h3>
+          Цена:<a href="#zatemnenie"><p>{{ post.price }}</p></a>
+        </div>
+
+        {% elif post.group == "ANGIOLOGY AND MRI" %}
+        <div class="Portfolio-box mrt">
+          <a href="{% url 'tovar' post.id %}"><img src="{{ post.img.url }}" alt=""></a>
+          <h3>{{ post.name }}</h3>
+          Цена:<a href="#zatemnenie"><p>{{ post.price }}</p></a>
+        </div>
+
+        {% elif post.group == "NEONATOLOGY" %}
+        <div class="Portfolio-box neon">
+          <a href="{% url 'tovar' post.id %}"><img src="{{ post.img.url }}" alt=""></a>
+          <h3>{{ post.name }}</h3>
+          Цена:<a href="#zatemnenie"><p>{{ post.price }}</p></a>
+        </div>
+
+        {% elif post.group == "CONSUMABLES" %}
+        <div class="Portfolio-box rashod">
+          <a href="{% url 'tovar' post.id %}"><img src="{{ post.img.url }}" alt=""></a>
+          <h3>{{ post.name }}</h3>
+          Цена:<a href="#zatemnenie"><p>{{ post.price }}</p></a>
+        </div>
+
+        {% elif post.group == "STERILIZATION AND DISINFECTION" %}
+        <div class="Portfolio-box ster">
+          <a href="{% url 'tovar' post.id %}"><img src="{{ post.img.url }}" alt=""></a>
+          <h3>{{ post.name }}</h3>
+          Цена:<a href="#zatemnenie"><p>{{ post.price }}</p></a>
+        </div>
+
+        {% elif post.group == "DENTISTRY" %}
+        <div class="Portfolio-box stom">
+          <a href="{% url 'tovar' post.id %}"><img src="{{ post.img.url }}" alt=""></a>
+          <h3>{{ post.name }}</h3>
+          Цена:<a href="#zatemnenie"><p>{{ post.price }}</p></a>
+        </div>
+
+        {% elif post.group == "ULTRASOUND DIAGNOSTICS" %}
+        <div class="Portfolio-box ultra">
+          <a href="{% url 'tovar' post.id %}"><img src="{{ post.img.url }}" alt=""></a>
+          <h3>{{ post.name }}</h3>
+          Цена:<a href="#zatemnenie"><p>{{ post.price }}</p></a>
+        </div>
+
+        {% elif post.group == "PHYSIOTHERAPY" %}
+        <div class="Portfolio-box fiz">
+          <a href="{% url 'tovar' post.id %}"><img src="{{ post.img.url }}" alt=""></a>
+          <h3>{{ post.name }}</h3>
+          Цена:<a href="#zatemnenie"><p>{{ post.price }}</p></a>
+        </div>
+
+        {% elif post.group == "FUNCTIONAL DIAGNOSTICS" %}
+        <div class="Portfolio-box funct">
+          <a href="{% url 'tovar' post.id %}"><img src="{{ post.img.url }}" alt=""></a>
+          <h3>{{ post.name }}</h3>
+          Цена:<a href="#zatemnenie"><p>{{ post.price }}</p></a>
+        </div>
+
+        {% elif post.group == "SURGERY" %}
+        <div class="Portfolio-box hir">
+          <a href="{% url 'tovar' post.id %}"><img src="{{ post.img.url }}" alt=""></a>
+          <h3>{{ post.name }}</h3>
+          Цена:<a href="#zatemnenie"><p>{{ post.price }}</p></a>
+        </div>
+
+        {% elif post.group == "ENDOCRINOLOGY" %}
+        <div class="Portfolio-box endocrin">
+          <a href="{% url 'tovar' post.id %}"><img src="{{ post.img.url }}" alt=""></a>
+          <h3>{{ post.name }}</h3>
+          Цена:<a href="#zatemnenie"><p>{{ post.price }}</p></a>
+        </div>
+
+        {% else %}
+        <div class="Portfolio-box endoscop">
+          <a href="{% url 'tovar' post.id %}"><img src="{{ post.img.url }}" alt=""></a>
+          <h3>{{ post.name }}</h3>
+          Цена:<a href="#zatemnenie"><p>{{ post.price }}</p></a>
+        </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-logo"><a href="#"><img src="{% static 'img/footer-logo.png' %}" alt=""></a></div>
+    <span class="copyright">&copy; 2009-2020 ООО "БМТ". Все права защищены.</span>
+    <div class="credits">
+    </div>
+  </div>
+</footer>
+
+{% endblock content %}

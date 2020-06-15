@@ -1,0 +1,55 @@
+{% extends 'web/main.html' %}
+{% load static %}
+{% block title_page %}
+<title>Товар</title>
+{% endblock title_page %}
+{% block content %}
+
+ <h1>Your shopping cart</h1>
+    <table class="cart">
+        <thead>
+        <tr>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Remove</th>
+            <th>Unit price</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+
+          {% for item in cart %}
+                      {% with product=item.product %}
+                          <tr>
+                              <td>
+                                  <a href="{{ product.get_absolute_url }}">
+                                      <img src="
+                                          {% if product.img %}
+                                              {{ product.img.url }}
+                                          {% else %}
+                                              {% static 'img/no_image.png' %}
+                                          {% endif %}">
+                                  </a>
+                              </td>
+                              <td>{{ product.name }}</td>
+                              <td>{{ product.quantity }}</td>
+                              <td><a href="{% url 'cart:cart_remove' product.id %}">Remove</a></td>
+                              <td class="num">${{ product.price }}</td>
+                              <td class="num">${{ item.total_price }}</td>
+                          </tr>
+                      {% endwith %}
+                  {% endfor %}
+                  <tr class="total">
+            <td>Total</td>
+            <td colspan="4"></td>
+            <td class="num">{{ cart.get_total_price }}</td>
+        </tr>
+        </tbody>
+    </table>
+    <p class="text-right">
+        <a href="{% url 'shop:product_list' %}" class="button light">Continue shopping</a>
+        <a href="#" class="button">Checkout</a>
+    </p>
+
+{% endblock content %}
